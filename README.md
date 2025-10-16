@@ -17,11 +17,11 @@ fire ball (green)
 
 ## Suggested fixes
 
-* Fix the compiler issues in the code
+*  DONE		Fix the compiler issues in the code
 
 ## Suggested tasks
 
-* Implement mouse input for pad
+*  Done 	Implement mouse input for pad
 * Improved VFX (ball trail, paddle hit response, brick particle destruction)
 * Better UI (progress bar rather than timer for countdown).
 * GameLoop
@@ -33,3 +33,6 @@ fire ball (green)
 
 # Time Details and Changelist
 <Add information to this section about the time you've taken for this task along with a professional changelist.>
+
+15:40 - 15:50 : Fixed compiler issues
+16:00 - 16:40 : Implimented mouse input for pad
