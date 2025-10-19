@@ -36,3 +36,6 @@ fire ball (green)
 
 15:40 - 15:50 : Fixed compiler issues
 16:00 - 16:40 : Implimented mouse input for pad
+
+
+21:40 - 22:45 : Implimented game timer

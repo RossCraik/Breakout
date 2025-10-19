@@ -33,7 +33,10 @@ void GameManager::update(float dt)
     _powerupInEffect = _powerupManager->getPowerupInEffect();
     _ui->updatePowerupText(_powerupInEffect);
     _powerupInEffect.second -= dt;
-    
+
+    if (!_pause) {
+        _ui->updateTimerText(dt);
+    }
 
     if (_lives <= 0)
     {
