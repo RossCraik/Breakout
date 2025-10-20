@@ -34,8 +34,15 @@ fire ball (green)
 # Time Details and Changelist
 <Add information to this section about the time you've taken for this task along with a professional changelist.>
 
-15:40 - 15:50 : Fixed compiler issues
+Day1:
+
+15:40 - 16:00 : Fixed compiler issues
 16:00 - 16:40 : Implimented mouse input for pad
 
+Day2:
 
-21:40 - 22:45 : Implimented game timer
+21:40 - 22:50 : Implimented game timer
+
+Day3:
+
+11:50 - 12:50 : Implimented a score

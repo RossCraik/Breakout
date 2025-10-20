@@ -26,6 +26,7 @@ void GameManager::initialize()
 
     // Create bricks
     _brickManager->createBricks(5, 10, 80.0f, 30.0f, 5.0f);
+    _ui->updateScoreText();
 }
 
 void GameManager::update(float dt)
@@ -41,11 +42,13 @@ void GameManager::update(float dt)
     if (_lives <= 0)
     {
         _masterText.setString("Game over.");
+        _ui->setStopTimer();
         return;
     }
     if (_levelComplete)
     {
         _masterText.setString("Level completed.");
+        _ui->setStopTimer();
         return;
     }
     // pause and pause handling
