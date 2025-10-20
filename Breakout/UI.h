@@ -15,6 +15,7 @@ public:
 
 	void updatePowerupText(std::pair<POWERUPS, float>);
 	void updateTimerText(float dt);
+	
 	void lifeLost(int lives);
 	void render();
 

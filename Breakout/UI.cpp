@@ -28,6 +28,7 @@ UI::UI(sf::RenderWindow* window, int lives, GameManager* gameManager)
 	_timerText.setPosition(350, 10);
 	_timerText.setFillColor(sf::Color::Cyan);
 	_timerText.setFont(_font);
+
 }
 
 UI::~UI()
