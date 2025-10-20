@@ -2,7 +2,6 @@
 #include "Ball.h"
 #include "PowerupManager.h"
 #include <iostream>
-//#include "main.cpp"
 
 GameManager::GameManager(sf::RenderWindow* window)
     : _window(window), _paddle(nullptr), _ball(nullptr), _brickManager(nullptr), _powerupManager(nullptr),
@@ -24,7 +23,6 @@ void GameManager::initialize()
     _ball = new Ball(_window, 400.0f, this); 
     _powerupManager = new PowerupManager(_window, _paddle, _ball);
     _ui = new UI(_window, _lives, this);
-    wait = true;
 
     // Create bricks
     _brickManager->createBricks(5, 10, 80.0f, 30.0f, 5.0f);
@@ -42,37 +40,12 @@ void GameManager::update(float dt)
 
     if (_lives <= 0)
     {
-        _masterText.setString("Game over.\n press space to play again.");
-        while (wait) {
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-
-                wait = false;
-                _continueToPlay = true;
-            }
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-
-                wait = false;
-                _continueToPlay = false;
-            }
-        }
+        _masterText.setString("Game over.");
         return;
     }
     if (_levelComplete)
     {
-        _masterText.setString("Level completed.\n press space to play again.");
-        while (wait) {
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-            
-                wait = false;
-                _continueToPlay = true;
-            }
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-
-                wait = false;
-                _continueToPlay = false;
-            }
-        }
-
+        _masterText.setString("Level completed.");
         return;
     }
     // pause and pause handling
