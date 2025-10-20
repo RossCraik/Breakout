@@ -42,6 +42,7 @@ void GameManager::update(float dt)
 
     if (_lives <= 0)
     {
+        
         _masterText.setString("Game over.\n press space to play again.");
         while (wait) {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
@@ -55,6 +56,7 @@ void GameManager::update(float dt)
                 _continueToPlay = false;
             }
         }
+        wait = true;
         return;
     }
     if (_levelComplete)
