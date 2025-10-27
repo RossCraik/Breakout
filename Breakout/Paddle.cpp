@@ -56,6 +56,16 @@ void Paddle::update(float dt)
     {
         setWidth(1.0f, 0.0f); // Reset to default width after duration
     }
+
+
+    if (_timeInNewPos > 0)
+    {
+        _timeInNewPos -= dt;
+    }
+    else
+    {
+        setPosition(_window->getSize().y - 50.0f, 0.0f); // Reset to default width after duration
+    }
 }
 
 void Paddle::render()
@@ -78,3 +88,10 @@ void Paddle::setWidth(float coeff, float duration)
     float newX = _sprite.getPosition().x + (_width - PADDLE_WIDTH) / 2;
     _sprite.setPosition(newX, _sprite.getPosition().y);
 }
+
+void Paddle::setPosition(float newPos, float duration)
+{
+    _sprite.setPosition(_sprite.getPosition().x, newPos);
+    _timeInNewPos = duration;
+}
+
